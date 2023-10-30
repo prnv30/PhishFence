@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicting Phishing website</title>
+    
+
+</head>
+ <!-- BootStrap -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+ integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<body style="background-color:powderblue;">
+ <!-- As a heading -->
+    
+            <div>
+            <h1>Phishing website classification</h1>
+                  
+
+            </div>
+     
+    
+         <form action="\predict" method="post">
+                                        
+            <h5 >Enter Url</h5>
+            <input type="text" id="url_get"name="url_get" placeholder="Enter url" required="required">
+                        
+
+            <br>
+            <br>
+            <!-- Submit -->
+            <input type="submit" value="Submit" >
+            
+             <br>
+            <br>
+      
+            <h3 >{{ prediction_text }}</h3>
+
+            <br>
+                 
+         </form>
+         
+    </div>
+    
+
+  
+</body>
+</html>
+© 2021 GitHub, Inc.
+Terms
+Privacy
