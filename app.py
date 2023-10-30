@@ -21,19 +21,6 @@ def predict():
     if request.method == "POST":
     
         url = request.form["url_get"] 
-        
-        # feature_names = ['Have_IP', 'Have_At', 'URL_Length', 'URL_Depth','Redirection', 
-        #               'https_Domain', 'TinyURL', 'Prefix/Suffix', 'DNS_Record', 'Web_Traffic', 
-        #               'Domain_Age', 'Domain_End', 'iFrame', 'Mouse_Over','Right_Click', 'Web_Forwards']
-
-        # x=getFeaturs(url_get)
-        # exrcat features
-        
-        #data_frame = pd.DataFrame(data=[x],columns=feature_names) 
-                    
-    
-        
-        
         obj = featureExtraction(url)
         x = np.array(obj.getFeaturesList()).reshape(1, 15)
         print(x)
@@ -48,9 +35,6 @@ def predict():
 
     return render_template("index.html")
 
-                
-                
-        
-            
+       
 if __name__ == "__main__":
     app.run(debug=True)
